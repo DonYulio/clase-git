@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text *ngIf="producto.cargando | async" >
+    Cargando.....
+  </ion-text>
+  <ion-text  *ngIf="datos">
+    {{ datos.limit }}
+    {{ datos.skip }}
+  </ion-text>
+  <button (click)="producto.obtenerProductosSiguiente30()"> Siguiente</button>
+</ion-content>
